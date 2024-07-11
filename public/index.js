@@ -37,7 +37,9 @@ async function getSolved() {
     },
     body: JSON.stringify(stuff)
   })
+  
   const parsed = await data.json();
+  console.log('This data',parsed);
   if (parsed.error) {
     errorMsg.innerHTML = `<code>${JSON.stringify(parsed, null, 2)}</code>`;
     return
